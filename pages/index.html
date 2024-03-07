@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Paradise - Home</title>
+    <link rel="stylesheet" href="../styles/styles.css"></link>
+</head>
+<body>
+    <script src="../javascript/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <header>
+        <h1>Cat Paradise</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="#">Services</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Gallery</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="welcome">
+            <h2>Welcome to Cat Paradise!</h2>
+            <p>Discover the wonderful world of cats with us!</p>
+            <img src="../images/GroupKittens.jpg"  alt="Cats">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cat Paradise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Regex validation for email input
+        var emailInput = document.getElementById('email');
+        emailInput.addEventListener('input', function() {
+            var email = emailInput.value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailInput.setCustomValidity('Invalid email address');
+            } else {
+                emailInput.setCustomValidity('');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Paradise - About</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <script src="../javascript/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <header>
+        <h1>Cat Paradise</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="#">Services</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Gallery</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Cat Paradise is dedicated to providing valuable information and resources for cat owners and enthusiasts. Our team of experts is passionate about cats and committed to promoting responsible cat ownership.</p>
+            <img src="../images/catsleep.jpeg" alt="About Us">
+
+            <h3>Our Team</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Founder</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Veterinarian</td>
+                </tr>
+                <tr>
+                    <td>Michael Johnson</td>
+                    <td>Trainer</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cat Paradise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Regex validation for email input
+        var emailInput = document.getElementById('email');
+        emailInput.addEventListener('input', function() {
+            var email = emailInput.value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailInput.setCustomValidity('Invalid email address');
+            } else {
+                emailInput.setCustomValidity('');
+            }
+        });
+    </script>
+</body>
+</html>

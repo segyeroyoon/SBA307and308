@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Paradise - Contact</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <script src="../javascript/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <header>
+        <h1>Cat Paradise</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">More</a>
+                    <div class="dropdown-content">
+                        <a href="#">Services</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Gallery</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+            <form id="contactForm" action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cat Paradise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Load Google Fonts stylesheet dynamically
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+        document.head.appendChild(link);
+
+        // Apply Roboto font to specific elements
+        var elementsToStyle = document.querySelectorAll('header, nav, h1, ul, li, .contact, label, input, button, footer');
+        elementsToStyle.forEach(function(element) {
+            element.style.fontFamily = 'Roboto, sans-serif';
+        });
+
+        // Function to handle form submission
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Form submitted!");
+        }
+
+        // Wait for the DOM content to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            var submitButton = document.querySelector('form button[type="submit"]');
+            if (submitButton) {
+                submitButton.addEventListener('click', submitForm);
+            }
+
+            // Regex validation for email input
+            var emailInput = document.getElementById('email');
+            emailInput.addEventListener('input', function() {
+                var email = emailInput.value;
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    emailInput.setCustomValidity('Invalid email address');
+                } else {
+                    emailInput.setCustomValidity('');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

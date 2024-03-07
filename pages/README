@@ -1,0 +1,17 @@
+# Cat Paradise Website
+
+Welcome to the Cat Paradise website! This is a simple 3-page website that provides information about cats, the Cat Paradise organization, and a contact form to get in touch.
+
+## Features
+
+- **Home Page**: Provides a brief introduction Cat Pet Paradise with an image gallery showcasing various cats.
+- **About Page**: Details information about Cat Paradise, its mission, and its team.
+- **Contact Page**: Includes a contact form for users to submit inquiries or feedback.
+
+## Technical Details
+
+- **HTML**: The website is built using HTML to structure the content, including navigation, text, images, and forms.
+- **CSS**: CSS is used for styling the website, including layout, colors, fonts, and responsive design.
+- **JavaScript**: JavaScript is utilized to enhance interactivity, handle form submissions, and validate user input.
+- **Web Fonts**: The Roboto font from Google Fonts is used to improve typography.
+- **Regex Validation**: Regex validation is implemented for the email input field in the contact form.
